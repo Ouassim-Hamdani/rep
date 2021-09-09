@@ -1,0 +1,514 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap');
+/*html {
+    scroll-behavior: smooth  !important;
+}*/
+.container {
+    animation: transIn 1s;
+}
+
+body {
+    overflow-x: hidden;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+}
+li, a ,button {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #edf0f1;
+    text-decoration: none;
+}
+.logo {
+    z-index: 4;
+    cursor: pointer;
+    margin-right:auto;
+    display: flex;
+    align-items: center;
+}
+.logo a {
+    align-items: center;
+    display: flex;
+}
+.logo img {
+    width: 50px;
+    padding-right:10px ;
+}
+.logo span {
+    font-weight: 800;
+    font-family: "Poppins", sans-serif;
+    color: #edf0f1;
+}
+.logo span span {
+    color: rgb(98, 235, 240);
+    
+}
+
+header {
+    
+    top: 0;
+    transition: all .3s ease-in-out;
+    background: linear-gradient(90deg, rgba(135,36,212,1) 0%, rgba(103,99,223,1) 100%);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0px 10%;  
+    position: fixed;
+    width: 90%;
+    border: none;
+}
+.nav-links {
+    list-style: none;
+}
+.nav-links li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+.nav-links li a {
+    transition: all 0.3s ease 0s;
+}
+.nav-links li a:hover {
+    font-weight: 700;
+    color: #f06ef0;
+}
+.link::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #f06ef0;
+    transition: width .3s;
+}
+.link:hover::after {
+    width: 100%;
+    transition: width .3s;
+}
+button {
+    padding: 5px 25px;
+    background-color: rgba(0, 136, 169, 1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    margin-left:20px ;
+}
+
+button:hover {
+    background-color:rgba(0, 136, 169, 0.8);
+}
+
+/*MOBILE*/
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: #ffffff;
+    margin: 5px;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+.burger {
+    z-index: 5;
+    display: none;
+}
+
+
+
+
+.toggle .line1 {
+          transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+          transform: rotate(45deg) translate(-5px, -6px);
+}
+/*MOBILE NAV REPSONSIVE*/
+@media screen and (max-width: 768px) {
+    body {
+      overflow-x: hidden;
+    }
+    header {
+      padding: 20px 20px;
+      text-align: center;
+      width: 100%;
+      z-index: 99999;
+    }
+    .nav-links {
+      position: fixed;
+      z-index: 1;
+      right: 0px;
+      height: 92vh;
+      top: 7vh;
+      background-color: rgba(103,99,223,1);
+      display: grid;
+      align-items: center;
+      width: 100%;
+      transform: translateX(100%);
+      transition: transform 0.5s ease-in;
+    }
+    .nav-links li {
+        text-align: center;
+    }
+    .burger {
+      padding-right: 30px;
+      display: block;
+      cursor: pointer;
+    }}
+
+.nav-active {
+    transform: translateX(0%);
+}
+
+.nav-active li {
+color: #fff;
+}
+
+/*END MOBILE*/
+
+/* HERO SECTION*/
+/*IMAGE STACKING */
+.hero {
+    display: flex;
+    align-items: center;
+    margin: 50px;}
+.img-hero {
+    margin-top: 15vh;
+    margin-left: 5vw;
+    width: 30%;
+    height: auto;
+}
+.hero-text {
+    margin-top: 15vh;
+    padding-left: 100px;
+    text-align: left;
+}
+.hero-text h1 {
+    text-align: center;
+    color: #434343;
+    font-weight: 800;
+    font-size: 45px;    
+}
+.hero-text h1 span {
+    color: #A245E9;
+    
+}
+.hero-text h4 {
+    margin-top: -10px;
+    text-align: center;
+    color : #434343;
+    font-weight: 600;
+}
+.hero-text h4 span{
+    font-weight: 800;
+    
+}
+
+.hero-text p{
+    margin-right: 50px;
+    margin-left:80px;
+    color: #434343;
+}
+.spe {
+    color: #fa4059;
+}
+.rep{
+    color: #A245E9;
+
+}
+
+
+.wave {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 200px;
+    background:url(imgs/wave.svg) ;
+    background-size: 50vw 200px;
+    animation: animate 25s linear infinite;
+    margin: 0;
+    margin-bottom: -10vh;
+}
+.wavei {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 200px;
+    background:url(imgs/wavei.svg) ;
+    background-size: 50vw 200px;
+    animation: animate 25s linear infinite;
+    margin-top: -9vh;
+}
+@keyframes animate {
+    0% {
+        background-position-x:0 ;
+
+    }
+    100% {
+        background-position:90vw ;
+    }
+}
+
+
+
+.cp1 {
+    margin-top: -20px;
+    background: linear-gradient(180deg, rgba(59,199,243,1) 0%, rgba(99,126,223,1) 100%);
+    text-align: center;
+}
+.cp1 a img {
+    margin-top: 70px;
+    width: 7%;
+
+}
+.cp2{
+    margin-top: -20px;
+    background: linear-gradient(360deg, rgba(59,199,243,1) 8%, rgba(99,126,223,1) 100%);
+    text-align: center;
+}
+.cp2 a img {
+    margin-top: 70px;
+    width: 7%;
+
+}
+.sems {
+    display: flex;
+    margin: 0px auto;
+    padding: 0 20px;
+}
+.s1 {
+    flex: 3;
+    padding: 50px;
+}
+.sems h1{
+    color: white;
+    font-weight: 800;
+}
+.s2 {
+    flex: 3;
+    padding: 50px;
+}
+
+.contact {
+    display: flex;
+    align-items:center;
+    margin: 0px auto;
+    padding: 10vh 15vw;
+}
+.contact img {
+    width: 40%;
+    flex: 3;
+}
+.contactbox {
+    display: grid;
+    flex: 3;   
+    padding-left: 15vw;
+    width: 60%;
+    position: relative;
+    margin: 0 auto;
+    height: auto;
+}
+.contact h1 {
+    color: #434343;
+    font-size: 35px;
+}
+.email {
+    display: flex;
+    padding-bottom: 100px;
+    
+}
+.email img {
+    max-width: 35px;
+    height: auto;
+}
+.email a {
+    color: #434343;
+    padding-left: 10px;
+}
+.contactbox a button {
+    font-size: 18px;
+}
+.end {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background-image: url("imgs/waveend.svg");
+    background-size: 100% 200%;
+    height: 100px;
+}
+.end h1{
+    padding-top: 50px;
+    color: rgb(255, 255, 255);
+    font-weight:600 ;
+}
+.end h1 span a {
+    font-weight: 700;
+    color: rgb(99, 221, 221);
+    font-size: 32px;
+}
+.active a{
+    color: #f06ef0;
+    font-weight: 800;
+
+}
+.active a::after {
+    content: '';
+    height: 2px;
+    background: #f06ef0;
+    display: block;
+    width: 100%;
+    transition: width 0.3s;
+}
+.mobile-text {
+    text-align: center;
+    color: #434343;
+    font-weight: 800;
+    font-size: 45px;    
+    display: none;
+}
+.mobile-text span {
+    color: #A245E9;
+    
+}
+/*MOBILE ALL RESPONSIVE*/
+
+@media screen and (max-width: 1168px) {
+    .wavei {
+        margin-top: -10vh;
+    }
+    .wave {
+        margin-bottom: -10vh;
+    }
+    .end {
+        display: flex;
+        width: 100%;
+        background-color: #a36bf8;
+        background-image: none;
+        padding-bottom: 5vh;
+      
+        justify-content: center;
+        align-items: center;
+    }
+   
+}
+
+    
+
+
+@media screen and (max-width: 768px) {
+    
+    .hero {
+        display:grid;
+        text-align: center;
+    }
+    .img-hero {
+        display: block;
+        min-width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .hero-text{
+        margin : 0;
+        padding: 0;
+    }
+    .hero-text h1 {
+        display: none;
+    }
+    .mobile-text {
+        display: block;
+        margin-bottom: -20px;
+        margin-top: 80px;
+    }
+    .hero-text h4 {
+        margin-top: 50px;
+    }
+    .hero-text p {
+        padding: 0;
+        margin-left:0;
+        margin-right: 0;
+    }
+    .wave {
+        left: 0;
+        bottom: 0;
+        height: 20vh;
+        background:url(imgs/wave.svg) ;
+        background-size: 50vw 20vh;
+        animation: animate 25s linear infinite;
+        margin: 0;
+        margin-bottom: -9vh;
+    }
+    .wavei {
+        left: 0;
+        bottom: 0;
+        height: 20vh;
+        background:url(imgs/wavei.svg) ;
+        background-size: 50vw 20vh;
+        animation: animate 25s linear infinite;
+        margin: 0;
+        margin-top: -9vh;
+    }
+    .sems {
+        display: grid;
+    }
+    .s1,.s2 {
+        padding: 20px 10px;
+    }
+    .cp-title {
+        min-width: 25%;
+    }
+    .contact {
+        display: grid;
+        padding: 10px;
+        z-index: 10;
+    }
+    .contact img {
+        min-width: 70%;
+        margin-right: auto;
+        margin-left: auto;
+        
+    }
+    .contactbox {
+      text-align: center;
+      padding-left: 0;
+    }
+    .contactbox h1{
+        text-align: center;
+        padding-top: 30px;
+    }
+    .email img{
+        min-width: 10px;
+        margin-right:2px;
+        
+    }
+    .email {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .end h1 {
+       
+       padding-left: 20px;
+       padding-right: 20px;
+       font-size: 30px;
+    }
+    .contactbox a button {
+        margin-bottom: 30px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+@keyframes transIn {
+    from {
+        opacity: 0;
+        transform: rotateX(-10deg);
+    }
+    to {
+        opacity: 100%;
+        transform: rotateX(0);
+    }
+}
